@@ -16,7 +16,7 @@ require(options.framework).startCluster(options);
 此后我们切到 egg 下查看 index.js 发现这样一行代码
 
 ```js
-  exports.startCluster = require('egg-cluster').startCluster;
+exports.startCluster = require('egg-cluster').startCluster
 ```
 
 ok，得了您咧，线索跳至去简单分析 egg-cluster
