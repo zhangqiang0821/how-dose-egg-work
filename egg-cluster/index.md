@@ -7,12 +7,12 @@ egg-cluster 模块将会揭晓 egg 是如何将 egg-scripts 分离出的自定�
 
 不了解的同学可以简单看下我这篇文章对 [《Node 深入浅出》第九章的总结](https://blog.csdn.net/yolo0927/article/details/81224942) ，内部即为 Master-Work（主从模式）如何通过多个 http 服务监听同一端口简单的原理实现，及如何使用 cluster 模块快速实现；
 
-至于 cluster 模块是如何实现的，官方已经推荐了文章 [Cluster 实现原理](https://cnodejs.org/topic/56e84480833b7c8a0492e20c)
+至于 cluster 模块是如何实现的，官方已经推荐了文章 [Cluster 实现原理](https://cnodejs.org/topic/56e84480833b7c8a0492e20c);
 
 阅读 egg-cluster 时大家应该结合文档对于 [多进程模型和进程](https://eggjs.org/zh-cn/core/cluster-and-ipc.html#agent-%E6%9C%BA%E5%88%B6) 来看，更容易理解，首先我肯定是对着看了然后记录的；
 
 ```js
-exports.startCluster = function(options, callback) {
+exports.startCluster = function (options, callback) {
   new Master(options).ready(callback)
 }
 ```
